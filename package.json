@@ -1,36 +1,29 @@
 {
-  "name": "node-express",
+  "name": "koa-example",
   "version": "1.0.0",
-  "description": "\"# node-express\"",
+  "description": "koa",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"cross-env NODE_ENV=development supervisor index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lei14370/node-express.git"
+    "url": "git+https://github.com/lei14370/koa-example.git"
   },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "lileilei <670029024@qq.com>",
+  "author": "lileilei",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lei14370/node-express/issues"
+    "url": "https://github.com/lei14370/koa-example/issues"
   },
-  "homepage": "https://github.com/lei14370/node-express#readme",
+  "homepage": "https://github.com/lei14370/koa-example#readme",
   "dependencies": {
-    "express": "^4.16.3"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "cross-env": "^5.1.4",
-    "supervisor": "^0.12.0",
-    "babel": "^6.23.0",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "co-redis": "^2.1.1",
+    "koa": "^2.11.0",
+    "koa-redis": "^4.0.1",
+    "koa-router": "^8.0.6",
+    "koa-session": "^5.12.3",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.8.10",
+    "redis": "^2.8.0"
   }
 }
