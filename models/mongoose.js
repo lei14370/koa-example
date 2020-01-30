@@ -3,7 +3,7 @@ const env=process.env.NODE_ENV ||'development';
 const config = require('../config')[env].mongodb;
 //1.连接 
 mongoose.connect(config.host,{
-  userNewUrlParer:true,
+  useNewUrlParser:true,
 });
 
 const conn=mongoose.connection;

@@ -13,7 +13,10 @@ const session=require('koa-session');
 app.keys=['some secret'];//session私钥
 
 const SESSION_CONFIG={
-  key:'lileilei:session',
+  key : 'lileilei:sess',//名
+  maxAge : 8640000,//有效期
+  httpOnly : true,// 服务器有效
+  signed:true, //签名
   store:redisStore({
     client//session保存到redis
   })
@@ -22,7 +25,7 @@ const SESSION_CONFIG={
 app.use(session(SESSION_CONFIG,app));
 
 const bodyparser=require('koa-bodyparser');
-app.use(bodyparser);
+app.use(bodyparser());
 //静态文件
 
 const static =require('koa-static');
