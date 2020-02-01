@@ -8,6 +8,12 @@ const redisClient =require('./middleware/redis');
 const redisStore=require('koa-redis');
 const warpper=require('co-redis');
 const client=warpper(redisClient);//兼容 async
+//跨域
+const cors=require('koa-cors')
+app.use(cors());
+//表单检验 中间件
+const bouncer=require('koa-bouncer');
+app.use(bouncer.middleware());
 //session鉴权
 const session=require('koa-session');
 app.keys=['some secret'];//session私钥
