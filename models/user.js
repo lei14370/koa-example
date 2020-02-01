@@ -12,7 +12,11 @@ const schema=mongoose.Schema({
   },
   email:String,
   nickname:String,
-  phone:String,
+  phone:{
+    type:String,
+    unique:true,
+    required:true,
+  },
   updateTime: { type: Date, default: Date.now },
 })
 
